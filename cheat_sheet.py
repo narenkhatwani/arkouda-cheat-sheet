@@ -27,11 +27,11 @@ def cs_sidebar():
 
     st.sidebar.markdown('''<small>Summary of the [docs](https://docs.streamlit.io/en/stable/api.html), as of [Streamlit v1.0.0](https://www.streamlit.io/).</small>''', unsafe_allow_html=True)
 
-    st.sidebar.markdown('__How to install and import__')
+    st.sidebar.markdown('__How to import__')
 
-    st.sidebar.code('$ pip install streamlit')
+    st.sidebar.code('>>> import arkouda as ak')
 
-    st.sidebar.markdown('Import convention')
+    st.sidebar.markdown('Running arkouda_server')
     st.sidebar.code('>>> import streamlit as st')
 
     st.sidebar.markdown('__Add widgets to sidebar__')
