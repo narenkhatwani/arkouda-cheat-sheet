@@ -38,7 +38,9 @@ def cs_sidebar():
 
     st.sidebar.markdown('__Connecting to Arkouda__')
     st.sidebar.code('''
+#format 1
 arkouda.connect(server='localhost', port=5555)
+#format 2
 arkouda.connect(connect_url='tcp://localhost:5555') 
     ''')
 
@@ -49,7 +51,7 @@ def cs_body():
 
     col1, col2, col3 = st.columns(3)
 
-    col1.subheader('Magic commands')
+    col1.subheader('Reading a .hdf5 file')
     col1.code('''# Magic commands 
     ''')
 
