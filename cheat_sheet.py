@@ -25,21 +25,21 @@ def cs_sidebar():
     #st.sidebar.markdown('''[<img src='data:image/png;base64,{}' class='img-fluid' width=32 height=32>](https://streamlit.io/)'''.format(img_to_bytes("logomark_website.png")), unsafe_allow_html=True)
     st.sidebar.title('Arkouda cheat sheet')
 
-    st.sidebar.markdown('''<small>Summary of the [docs](https://docs.streamlit.io/en/stable/api.html), as of [Streamlit v1.0.0](https://www.streamlit.io/).</small>''', unsafe_allow_html=True)
+    st.sidebar.markdown('''<small>Summary of the [docs](https://arkouda.readthedocs.io/en/latest/index.html), as of Arkouda v1.0.0</small>''', unsafe_allow_html=True)
 
     st.sidebar.markdown('__How to import__')
 
     st.sidebar.code('>>> import arkouda as ak')
 
-    st.sidebar.markdown('__Running arkouda_server__')
+    st.sidebar.markdown('__Launch arkouda_server__')
     st.sidebar.code('./arkouda_server')
-    st.sidebar.markdown('Multi-locale startup')
+    st.sidebar.markdown('__Multi-locale startup__')
     st.sidebar.code('./arkouda_server -nl 2')
 
-    st.sidebar.markdown('____')
+    st.sidebar.markdown('__Connecting to Arkouda__')
     st.sidebar.code('''
-$ streamlit --help
-$ streamlit run your_script.py
+arkouda.connect(server='localhost', port=5555)
+arkouda.connect(connect_url='tcp://localhost:5555') 
     ''')
 
     return None
