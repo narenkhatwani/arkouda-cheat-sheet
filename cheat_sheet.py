@@ -10,9 +10,5 @@ st.set_page_config(
      initial_sidebar_state="expanded",
 )
 
-st.title("Arkouda Cheat SHeet")
+st.title("Arkouda Cheat Sheet")
 
-# Run main()
-
-if __name__ == '__main__':
-    main()
