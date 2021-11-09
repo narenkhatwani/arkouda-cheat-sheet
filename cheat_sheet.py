@@ -34,29 +34,12 @@ def cs_sidebar():
     st.sidebar.markdown('__Running arkouda_server__')
     st.sidebar.code('>>> import streamlit as st')
 
-    st.sidebar.markdown('__Add widgets to sidebar__')
-    st.sidebar.code('''
-    st.sidebar.<widget>
-    >>> a = st.sidebar.radio(\'R:\',[1,2])
-    ''')
-
     st.sidebar.markdown('__Command line__')
     st.sidebar.code('''
     $ streamlit --help
     $ streamlit run your_script.py
-    $ streamlit hello
-    $ streamlit config show
-    $ streamlit cache clear
-    $ streamlit docs
-    $ streamlit --version
     ''')
 
-    st.sidebar.markdown('__Pre-release features__')
-    st.sidebar.markdown('[Beta and experimental features](https://docs.streamlit.io/en/stable/api.html#beta-and-experimental-features)')
-    st.sidebar.code('''
-    pip uninstall streamlit
-    pip install streamlit-nightly --upgrade
-    ''')
     return None
 
 def cs_body():
