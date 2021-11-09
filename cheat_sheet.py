@@ -32,9 +32,11 @@ def cs_sidebar():
     st.sidebar.code('>>> import arkouda as ak')
 
     st.sidebar.markdown('__Running arkouda_server__')
-    st.sidebar.code('>>> import streamlit as st')
+    st.sidebar.code('./arkouda_server')
+    st.sidebar.markdown('Multi-locale startup')
+    st.sidebar.code('./arkouda_server -nl 2')
 
-    st.sidebar.markdown('__Command line__')
+    st.sidebar.markdown('____')
     st.sidebar.code('''
 $ streamlit --help
 $ streamlit run your_script.py
