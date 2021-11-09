@@ -53,8 +53,8 @@ def cs_body():
 
     col1, col2, col3 = st.columns(3)
 
-    col1.subheader('Reading Data (.hdf5 file)')
-    col1.code('''
+    col1.subheader('Reading Data')
+    col1.code('''#.hdf5 file
 ak.read_all('PATH/FILENAME.hdf')
 ak.get_datasets('PATH/FILENAME.hdf')
     ''')
