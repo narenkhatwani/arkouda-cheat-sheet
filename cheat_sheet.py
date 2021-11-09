@@ -11,7 +11,7 @@ st.set_page_config(
 )
 
 st.title("Arkouda Cheat Sheet")
-
+st.markdown("")
 
 def main():
     cs_sidebar()
@@ -26,16 +26,18 @@ def cs_sidebar():
     st.sidebar.title('Arkouda cheat sheet')
 
     st.sidebar.markdown('''<small>Summary of the [docs](https://arkouda.readthedocs.io/en/latest/index.html), as of Arkouda v1.0.0</small>''', unsafe_allow_html=True)
-
+    #how to download
+    st.sidebar.markdown('__How to Download and Install__')
+    st.sidebar.markdown('Follow the steps given at [link](https://github.com/Bears-R-Us/arkouda/blob/master/README.md#build-ak)')
+    #how to import
     st.sidebar.markdown('__How to import__')
-
     st.sidebar.code('>>> import arkouda as ak')
-
+    #how to launch
     st.sidebar.markdown('__Launch arkouda_server__')
     st.sidebar.code('./arkouda_server')
     st.sidebar.markdown('__Multi-locale startup__')
     st.sidebar.code('./arkouda_server -nl 2')
-
+    #how to conect to arkouda
     st.sidebar.markdown('__Connecting to Arkouda__')
     st.sidebar.code('''
 #format 1
@@ -47,12 +49,14 @@ arkouda.connect(connect_url='tcp://localhost:5555')
     return None
 
 def cs_body():
-    # Magic commands
+    # Main body arkouda details
 
     col1, col2, col3 = st.columns(3)
 
-    col1.subheader('Reading a .hdf5 file')
-    col1.code('''# Magic commands 
+    col1.subheader('Reading Data (.hdf5 file)')
+    col1.code('''
+ak.read_all('PATH/FILENAME.hdf')
+ak.get_datasets('PATH/FILENAME.hdf')
     ''')
 
     # Display text
