@@ -31,7 +31,7 @@ def cs_sidebar():
 
     st.sidebar.code('>>> import arkouda as ak')
 
-    st.sidebar.markdown('Running arkouda_server')
+    st.sidebar.markdown('__Running arkouda_server__')
     st.sidebar.code('>>> import streamlit as st')
 
     st.sidebar.markdown('__Add widgets to sidebar__')
