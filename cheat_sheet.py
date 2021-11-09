@@ -83,8 +83,8 @@ st.metric(label="Temp", value="273 K", delta="1.2 K")
 
     # Display media
 
-    col12.subheader('Display media')
-    col12.code('''
+    col2.subheader('Display media')
+    col2.code('''
 st.image('./header.png')
 st.audio(data)
 st.video(data)
