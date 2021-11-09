@@ -36,8 +36,8 @@ def cs_sidebar():
 
     st.sidebar.markdown('__Command line__')
     st.sidebar.code('''
-    $ streamlit --help
-    $ streamlit run your_script.py
+$ streamlit --help
+$ streamlit run your_script.py
     ''')
 
     return None
