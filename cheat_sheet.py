@@ -26,9 +26,39 @@ def cs_sidebar():
     st.sidebar.header('Streamlit cheat sheet')
 
     st.sidebar.markdown('''
-<small>Summary of the [docs](https://docs.streamlit.io/en/stable/api.html), as of [Streamlit v1.0.0](https://www.streamlit.io/).</small>
+    <small>Summary of the [docs](https://docs.streamlit.io/en/stable/api.html), as of [Streamlit v1.0.0](https://www.streamlit.io/).</small>
     ''', unsafe_allow_html=True)
 
+    st.sidebar.markdown('__How to install and import__')
+
+    st.sidebar.code('$ pip install streamlit')
+
+    st.sidebar.markdown('Import convention')
+    st.sidebar.code('>>> import streamlit as st')
+
+    st.sidebar.markdown('__Add widgets to sidebar__')
+    st.sidebar.code('''
+    st.sidebar.<widget>
+    >>> a = st.sidebar.radio(\'R:\',[1,2])
+    ''')
+
+    st.sidebar.markdown('__Command line__')
+    st.sidebar.code('''
+    $ streamlit --help
+    $ streamlit run your_script.py
+    $ streamlit hello
+    $ streamlit config show
+    $ streamlit cache clear
+    $ streamlit docs
+    $ streamlit --version
+    ''')
+
+    st.sidebar.markdown('__Pre-release features__')
+    st.sidebar.markdown('[Beta and experimental features](https://docs.streamlit.io/en/stable/api.html#beta-and-experimental-features)')
+    st.sidebar.code('''
+    pip uninstall streamlit
+    pip install streamlit-nightly --upgrade
+    ''')
     return None
 
 def cs_body():
