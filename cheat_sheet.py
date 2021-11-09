@@ -23,7 +23,7 @@ def main():
     #sidebar function
 def cs_sidebar():
 
-    #st.sidebar.markdown('''[<img src='data:image/png;base64,{}' class='img-fluid' width=32 height=32>](https://streamlit.io/)'''.format(img_to_bytes("logomark_website.png")), unsafe_allow_html=True)
+    st.sidebar.markdown('''[<img src='data:image/png;base64,{}' class='img-fluid' width=32 height=32>](https://streamlit.io/)'''.format(img_to_bytes("https://github.com/Bears-R-Us/arkouda/raw/master/pictures/arkouda_wide_marker1.png?raw=true")), unsafe_allow_html=True)
     st.sidebar.title('Arkouda cheat sheet')
 
     st.sidebar.markdown('''<small>Summary of the [docs](https://arkouda.readthedocs.io/en/latest/index.html), as of Arkouda v1.0.0</small>''', unsafe_allow_html=True)
