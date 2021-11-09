@@ -59,40 +59,27 @@ ak.read_all('PATH/FILENAME.hdf')
 ak.get_datasets('PATH/FILENAME.hdf')
     ''')
 
-    # Display text
-
-    col1.subheader('Display text')
-    col1.code('''
-st.text('Fixed width text')
-st.markdown('_Markdown_') # see *
-st.caption('Balloons. Hundreds of them...')
-st.latex(r\'\'\' e^{i\pi} + 1 = 0 \'\'\')
-st.write('Most objects') # df, err, func, keras!
-st.write(['st', 'is <', 3]) # see *
-st.title('My title')
-st.header('My header')
-st.subheader('My sub')
-st.code('for i in range(8): foo()')
-* optional kwarg unsafe_allow_html = True
-    ''')
-
     # Display data
 
     col1.subheader('Display data')
     col1.code('''
-st.dataframe(my_dataframe)
-st.table(data.iloc[0:10])
-st.json({'foo':'bar','fu':'ba'})
-st.metric(label="Temp", value="273 K", delta="1.2 K")
+data['column_name']
     ''')
 
-    # Display media
+    # Arithmetic Operations
 
-    col2.subheader('Display media')
+    col2.subheader('Arithmetic Operations')
     col2.code('''
-st.image('./header.png')
-st.audio(data)
-st.video(data)
+>>>A = ak.arange(10)
+>>>A += 2
+>>>A
+array([2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+>>>A + A
+array([4, 6, 8, 10, 12, 14, 16, 18, 20, 22])
+>>>2 * A
+array([4, 6, 8, 10, 12, 14, 16, 18, 20, 22])
+>>>A == A
+array([True, True, True, True, True, True, True, True, True, True])
     ''')
 
     return None
