@@ -1,25 +1,26 @@
+#importing all necessary dependencies
 import streamlit as st
 from pathlib import Path
 import base64
 
-# Initial page config
-
+#initial page configuration
 st.set_page_config(
      page_title='Arkouda Cheat Sheet',
      layout="wide",
      initial_sidebar_state="expanded",
 )
-
+#title
 st.title("Arkouda Cheat Sheet")
+#description
 st.markdown("")
 
+#main driver code
 def main():
     cs_sidebar()
     cs_body()
-
     return None
 
-
+    #sidebar function
 def cs_sidebar():
 
     #st.sidebar.markdown('''[<img src='data:image/png;base64,{}' class='img-fluid' width=32 height=32>](https://streamlit.io/)'''.format(img_to_bytes("logomark_website.png")), unsafe_allow_html=True)
@@ -45,29 +46,25 @@ arkouda.connect(server='localhost', port=5555)
 #format 2
 arkouda.connect(connect_url='tcp://localhost:5555') 
     ''')
-
+    #return
     return None
 
 def cs_body():
     # Main body arkouda details
 
     col1, col2, col3 = st.columns(3)
-
+    #reading data
     col1.subheader('Reading Data')
     col1.code('''#.hdf5 file
 ak.read_all('PATH/FILENAME.hdf')
 ak.get_datasets('PATH/FILENAME.hdf')
     ''')
-
     # Display data
-
     col1.subheader('Display data')
     col1.code('''
 data['column_name']
     ''')
-
     # Arithmetic Operations
-
     col2.subheader('Arithmetic Operations')
     col2.code('''
 >>>A = ak.arange(10)
@@ -81,7 +78,7 @@ array([4, 6, 8, 10, 12, 14, 16, 18, 20, 22])
 >>>A == A
 array([True, True, True, True, True, True, True, True, True, True])
     ''')
-
+    #return
     return None
 
 # Run main()
