@@ -12,3 +12,6 @@ st.set_page_config(
 
 st.title("Arkouda Cheat Sheet")
 
+
+st.title("Arkouda Cheat Sheet lol")
+
