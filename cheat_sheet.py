@@ -11,8 +11,9 @@ st.set_page_config(
 )
 #title
 st.title("Arkouda Cheat Sheet")
+
 #description
-st.markdown("")
+st.markdown("<h4 style='text-align: justify;font-size:110%;font-family:Arial,sans-serif;line-height: 1.3;'>A software package that allows a user to interactively issue massive parallel computations on distributed data using functions and syntax that mimic NumPy, the underlying computational library used in most Python data science workflows</h4>",unsafe_allow_html=True)
 
 #main driver code
 def main():
@@ -20,11 +21,18 @@ def main():
     cs_body()
     return None
 
-    #sidebar function
+
+def img_to_bytes(img_path):
+    img_bytes = Path(img_path).read_bytes()
+    encoded = base64.b64encode(img_bytes).decode()
+    return encoded
+
+
+#sidebar function
 def cs_sidebar():
 
     st.sidebar.title('Arkouda cheat sheet')
-
+    st.sidebar.markdown('''[<img src='data:image/png;base64,{}' class='img-fluid' width=300 height=210>](https://github.com/Bears-R-Us/arkouda)'''.format(img_to_bytes("arkouda_transparent.png")), unsafe_allow_html=True)
     st.sidebar.markdown('''<small>Summary of the [docs](https://arkouda.readthedocs.io/en/latest/index.html), as of Arkouda v1.0.0</small>''', unsafe_allow_html=True)
     #how to download
     st.sidebar.markdown('__How to Download and Install__')
@@ -81,6 +89,5 @@ array([True, True, True, True, True, True, True, True, True, True])
     return None
 
 # Run main()
-
 if __name__ == '__main__':
     main()
