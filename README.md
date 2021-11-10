@@ -2,14 +2,7 @@
 
 This repository contains the code for the cheat sheet made for the components present in Arkouda
 
-Click [here](https://share.streamlit.io/narenkhatwani/arkouda-cheat-sheet/main/cheat_sheet.py)to get redirected to the Cheat Sheet
-
-
-
-
-
-
-
+Click [here](https://share.streamlit.io/narenkhatwani/arkouda-cheat-sheet/main/cheat_sheet.py)to get redirected to the Cheat Sheet<br />
 
 
 
