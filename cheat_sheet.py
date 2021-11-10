@@ -32,7 +32,7 @@ def img_to_bytes(img_path):
 def cs_sidebar():
 
     st.sidebar.title('Arkouda cheat sheet')
-    st.sidebar.markdown('''[<img src='data:image/png;base64,{}' class='img-fluid' width=300 height=210>](https://github.com/Bears-R-Us/arkouda)'''.format(img_to_bytes("arkouda_transparent.png")), unsafe_allow_html=True)
+    st.sidebar.markdown('''[<img src='data:image/png;base64,{}' class='img-fluid' width=330 height=210>](https://github.com/Bears-R-Us/arkouda)'''.format(img_to_bytes("arkouda_transparent.png")), unsafe_allow_html=True)
     st.sidebar.markdown('''<small>Summary of the [docs](https://arkouda.readthedocs.io/en/latest/index.html), as of Arkouda v1.0.0</small>''', unsafe_allow_html=True)
     #how to download
     st.sidebar.markdown('__How to Download and Install__')
@@ -46,7 +46,7 @@ def cs_sidebar():
     st.sidebar.markdown('__Multi-locale startup__')
     st.sidebar.code('./arkouda_server -nl 2')
     #how to conect to arkouda
-    st.sidebar.markdown('__Connecting to Arkouda__')
+    st.sidebar.markdown('__Connecting to Arkouda Server__')
     st.sidebar.code('''
 #format 1
 arkouda.connect(server='localhost', port=5555)
