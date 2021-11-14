@@ -59,7 +59,7 @@ arkouda.connect(connect_url='tcp://localhost:5555')
 def cs_body():
     # Main body arkouda details
 
-    col1, col2, col3 = st.columns(3)
+    col1, col2 = st.columns(2)
     #.hdf5 file conversion
     col1.subheader('.hdf5 file conversion')
     col1.markdown('Using formatter file')
