@@ -5,7 +5,7 @@ This repository contains the code for the cheat sheet made for the components pr
 Click [here](https://share.streamlit.io/narenkhatwani/arkouda-cheat-sheet/main/cheat_sheet.py) to get redirected to the Cheat Sheet<br />
 
 
-![Imgur Image](https://imgur.com/BvYacoW)
+![Imgur Image](banner.png)
 
 Special Mention:
 I was inspired by Daniel Lewis's Cheat sheet for Streamlit to make a similar one for Arkouda [link](https://github.com/daniellewisDL/streamlit-cheat-sheet)
