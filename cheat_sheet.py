@@ -105,7 +105,7 @@ ak.get_datasets('PATH/FILENAME.hdf')
 data['column_name']
     ''')
     # Check Arkouda Configuration
-    col2.subheader('Arkouda COnfiguration')
+    col2.subheader('Arkouda Configuration')
     col2.code('''
 #using the get_config() method
 cfg=ak.get_config()
