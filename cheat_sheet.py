@@ -19,6 +19,8 @@ st.markdown("<h6 style='text-align: justify;font-size:110%;font-family:Georgia,s
 def main():
     cs_sidebar()
     cs_body()
+    st.header("Operations")
+    cs_body2()
     return None
 
 
@@ -88,23 +90,38 @@ def ak_create_akdict_from_df(df):
 green_from_pandas = ak_create_akdict_from_df(pdgreen)
     ''')
     #formatter file example
-    col1.subheader("Example of a formatter file")
-    col1.markdown("Click on [link](https://render.githubusercontent.com/view/ipynb?color_mode=light&commit=6851eb342c7c5446203e10bd249129f392183e94&enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6e6172656e6b68617477616e692f41726b6f7564614e6f7465626f6f6b732f363835316562333432633763353434363230336531306264323439313239663339323138336539342f4e5943546178695f736d616c6c2e6970796e62&nwo=narenkhatwani%2FArkoudaNotebooks&path=NYCTaxi_small.ipynb&repository_id=415315124&repository_type=Repository#Describe-Data-Format) to redirect")
-    col1.markdown("See video explanation [here](https://youtu.be/KjdaQ2Sg_oc?t=569)")
+    col2.subheader("Example of a formatter file")
+    col2.markdown("Click on [link](https://render.githubusercontent.com/view/ipynb?color_mode=light&commit=6851eb342c7c5446203e10bd249129f392183e94&enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6e6172656e6b68617477616e692f41726b6f7564614e6f7465626f6f6b732f363835316562333432633763353434363230336531306264323439313239663339323138336539342f4e5943546178695f736d616c6c2e6970796e62&nwo=narenkhatwani%2FArkoudaNotebooks&path=NYCTaxi_small.ipynb&repository_id=415315124&repository_type=Repository#Describe-Data-Format) to redirect")
+    col2.markdown("See video explanation [here](https://youtu.be/KjdaQ2Sg_oc?t=569)")
     #reading data
-    col1.subheader('Reading Data')
-    col1.code('''#.hdf5 file
+    col2.subheader('Reading Data')
+    col2.code('''#.hdf5 file
 ak.read_all('PATH/FILENAME.hdf')
 ak.get_datasets('PATH/FILENAME.hdf')
     ''')
     # Display data
-    col1.subheader('Display data')
-    col1.code('''
+    col2.subheader('Display data')
+    col2.code('''
 data['column_name']
     ''')
-    # Arithmetic Operations
-    col2.subheader('Basic arithmetic Operations')
+    # Check Arkouda Configuration
+    col2.subheader('Arkouda COnfiguration')
     col2.code('''
+#using the get_config() method
+cfg=ak.get_config()
+#displaying the configuration
+cfg
+    ''')
+
+    #return
+    return None
+
+
+def cs_body2():
+    col1, col2 = st.columns(2)
+    # Arithmetic Operations
+    col1.subheader('Basic arithmetic Operations')
+    col1.code('''
 #create an array with values ranging from 0-10
 >>>A = ak.arange(10)
 #perform the addition as A=A+2
@@ -132,7 +149,6 @@ B=data['column_name2']
     ''')
     #return
     return None
-
 # Run main()
 if __name__ == '__main__':
     main()
