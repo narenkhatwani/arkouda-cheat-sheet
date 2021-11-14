@@ -4,7 +4,7 @@ This repository contains the code for the cheat sheet made for the components pr
 
 Click [here](https://share.streamlit.io/narenkhatwani/arkouda-cheat-sheet/main/cheat_sheet.py) to get redirected to the Cheat Sheet<br />
 
-[Imgur Image](https://imgur.com/BvYacoW)
+! [Imgur Image](https://imgur.com/BvYacoW)
 
 
 Special Mention:
